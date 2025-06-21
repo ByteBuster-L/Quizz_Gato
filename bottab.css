@@ -12,7 +12,6 @@
       align-items: center;
       height: 100vh;
       background-color: #f2f2f2;
-      margin-top: 150px;
     }
 
     #board {
@@ -360,92 +359,120 @@ span {
 }
 
 /*MENÚ */
-
 .navs {
     background-color: #5F1B2D;
     color: white;
     position: fixed;
-    width: 100%;
-    transition: top 0.3s;
+    width: 100vw;
+    top: 0;
+    left: 0;
     z-index: 1000;
+    min-height: 70px;
+    height: 110px;
+    display: flex;
+    align-items: center;
 }
 
 .navegacion {
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
 }
 
+.logo {
+    width: 180px;
+    height: 48px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 3.6rem;
+    color: #C19E74;
+    cursor: pointer;
+    margin-left: 18px;
+}
+
 .linksheader {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
+    align-items: center;
+    padding: 0;
 }
 
 .linksheader li {
-    margin: 0 15px;
+    margin: 0 12px;
     padding: 7px 5px;
-    transition: background-color 0.3s ease, border-radius 0.3s ease;
-    /* Efecto de transición suave */
+    transition: background-color 0.3s, border-radius 0.3s;
 }
 
 .linksheader a {
     color: #C19E74;
     text-decoration: none;
     padding: 10px;
-    /* Agregar un poco de espacio alrededor del texto */
+    font-size: 1.5rem;
 }
 
-.register,
-.login {
-    margin-left: 20px;
-    color: #C19E74;
-    text-decoration: none;
-}
-
-.menu-icon {
-    display: none;
-    /* Ocultar el icono por defecto */
-    font-size: 30px;
-    cursor: pointer;
-    color: #C19E74;
-}
-
-/* Efecto hover */
 .linksheader li:hover {
     background-color: #81253d;
     border-radius: 4px;
 }
 
-.logo{
-    width: 240px; 
-    height: 60px;
+.register,
+.login {
+    margin-left: 18px;
+    color: #C19E74;
+    text-decoration: none;
+    font-size: 1.05rem;
 }
 
 /* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
-    .linksheader {
-        display: none;
-        /* Ocultar el menú por defecto */
+@media (max-width: 900px) {
+    .navs {
+        min-height: 60px;
+        height: 60px;
+    }
+    .logo {
+        width: 140px;
+        height: 38px;
+    }
+    .navegacion {
         flex-direction: column;
-        position: absolute;
-        background-color: #333;
-        width: 100%;
-        top: 60px;
-        /* Ajustar según la altura del header */
-        left: 0;
+        align-items: flex-start;
+        padding: 10px 10px 0 10px;
     }
-
-    .linksheader.active {
-        display: flex;
-        /* Mostrar el menú cuando está activo */
-    }
-
     .menu-icon {
+        display: block !important;
+        font-size: 2rem;
+        margin-top: 8px;
+        cursor: pointer;
+    }
+    .linksheader {
+        flex-direction: column;
+        width: 100vw;
+        left: 0;
+        top: 60px;
+        background: #5F1B2D;
+        position: absolute;
+        display: none;
+    }
+    .linksheader.active {
+        display: flex !important;
+    }
+    .linksheader li {
+        margin: 12px 0;
+        width: 100vw;
+        text-align: center;
+    }
+    .linksheader a {
+        font-size: 1.1rem;
+        padding: 14px 0;
         display: block;
-        /* Mostrar el icono en móviles */
+        width: 100vw;
+    }
+    .register, .login {
+        margin: 10px 0 0 0;
     }
 }
 
@@ -629,9 +656,4 @@ span {
     .escudo {
         max-width: 48px;
     }
-}
-
-/* Ajuste para evitar que el footer tape el contenido */
-body {
-    padding-bottom: 180px;
 }
