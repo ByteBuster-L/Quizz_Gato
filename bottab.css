@@ -272,6 +272,7 @@ main {
 span {
     color: #C79B66;
 }
+
 .footer-content {
     background-color: #5F1B2D;
     padding: 100px 40px 40px;
@@ -365,109 +366,109 @@ span {
     text-decoration: none;
     font-size: 1.05rem;
 }
+/* Corrección para el main */
+main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 340px auto 220px auto;
+    height: auto;
+}
 
-/* Estilos para dispositivos móviles */
+@media (max-width: 960px) {
+    main {
+        flex: 100%;
+        width: 100%;
+    }
+}
+
+/* Responsive para tablero */
+@media (max-width: 900px) {
+    #board {
+        grid-template-columns: repeat(3, 30vw);
+        grid-template-rows: repeat(3, 30vw);
+        max-width: 95vw;
+    }
+
+    .square {
+        width: 30vw;
+        height: 30vw;
+        font-size: 2rem;
+    }
+
+    #quiz {
+        position: relative;
+        margin: 40px auto;
+        padding: 12px;
+        max-width: 95vw;
+    }
+}
+
+/* Responsive del menú */
 @media (max-width: 900px) {
     .navs {
         min-height: 60px;
         height: 60px;
     }
+
     .logo {
         width: 140px;
         height: 38px;
     }
+
     .navegacion {
         flex-direction: column;
         align-items: flex-start;
-        padding: 10px 10px 0 10px;
+        padding: 10px;
     }
+
     .menu-icon {
-        display: block !important;
+        display: block;
         font-size: 2rem;
-        margin-top: 8px;
-        cursor: pointer;
     }
+
     .linksheader {
+        display: none;
         flex-direction: column;
         width: 100vw;
         left: 0;
         top: 60px;
         background: #5F1B2D;
         position: absolute;
-        display: none;
-    }
-    .linksheader.active {
-        display: flex !important;
-    }
-    .linksheader li {
-        margin: 12px 0;
-        width: 100vw;
-        text-align: center;
-    }
-    .linksheader a {
-        font-size: 1.1rem;
-        padding: 14px 0;
-        display: block;
-        width: 100vw;
-    }
-    .register, .login {
-        margin: 10px 0 0 0;
-    }
-}
-
-@media (max-width: 1200px)
-{
-    .linksheader {
-        display: none;
-        /* Ocultar el menú por defecto */
-        flex-direction: column;
-        position: absolute;
-        background-color: #333;
-        width: 100%;
-        top: 60px;
-        /* Ajustar según la altura del header */
-        left: 0;
     }
 
     .linksheader.active {
         display: flex;
-        /* Mostrar el menú cuando está activo */
     }
-    
-    .menu-icon {
+
+    .linksheader li {
+        width: 100vw;
+        text-align: center;
+        margin: 12px 0;
+    }
+
+    .linksheader a {
         display: block;
-        /* Mostrar el icono en móviles */
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 14px 0;
+    }
+
+    .register, .login {
+        margin: 10px 0 0;
     }
 }
 
-/*aquí termina el menú principal*/
-
-/* Responsive para tablets */
-@media screen and (max-width: 900px) {
+/* Responsive del footer */
+@media (max-width: 900px) {
     .footer-content {
         flex-direction: column;
         align-items: center;
-        padding: 60px 10px 20px;
+        padding: 20px 5vw 10px;
         gap: 10px;
     }
-    .footer-main,
-    .links {
-        margin: 20px 0;
-        width: 90%;
-        min-width: unset;
-        align-items: center;
-        text-align: center;
-    }
-    .links {
-        margin: 20px 0;
-    }
-}
 
-/* Responsive para móviles */
-@media screen and (max-width: 600px) {
-    .footer-content {
-        padding: 40px 5px 10px;
-    }
     .footer-main,
     .links {
         margin: 10px 0;
@@ -475,118 +476,25 @@ span {
         align-items: center;
         text-align: center;
     }
+
+    .footer-main h2 {
+        font-size: 1.1rem;
+    }
+
+    .links p {
+        font-size: 1rem;
+    }
+
+    .links a {
+        font-size: 0.9rem;
+    }
+
+    .escudo {
+        max-width: 48px;
+    }
+
     .social-links {
         justify-content: center;
         width: 100%;
-    }
-    .footer-main h2 {
-        font-size: 1.2rem;
-    }
-    .links p {
-        font-size: 1rem;
-    }
-    .links a {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 900px) {
-    .navs {
-        min-height: 60px;
-        padding: 0;
-    }
-    .logo {
-        width: 140px;
-        height: 38px;
-    }
-    .navegacion {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 10px 0 10px;
-    }
-    .menu-icon {
-        display: block;
-        font-size: 2rem;
-        margin-top: 8px;
-    }
-    .linksheader {
-        flex-direction: column;
-        width: 100vw;
-        left: 0;
-        top: 60px;
-        background: #5F1B2D;
-        position: absolute;
-        display: none;
-    }
-    .linksheader.active {
-        display: flex;
-    }
-    .linksheader li {
-        margin: 12px 0;
-        width: 100vw;
-        text-align: center;
-    }
-    .linksheader a {
-        font-size: 1.1rem;
-        padding: 14px 0;
-        display: block;
-        width: 100vw;
-    }
-    .register, .login {
-        margin: 10px 0 0 0;
-    }
-}
-
-/* Responsive TABLERO y QUIZ */
-@media (max-width: 600px) {
-    #board {
-        grid-template-columns: repeat(3, 48vw);
-        grid-template-rows: repeat(3, 48vw);
-        max-width: 126vw;
-        min-width: 126vw;
-    }
-    .square {
-        width: 48vw;
-        height: 48vw;
-        font-size: 4rem;
-    }
-    #quiz {
-        padding: 8px 2vw 8px 2vw;
-        font-size: 1rem;
-        position: absolute;
-        transform: none;
-        max-width: 98vw;
-    }
-}
-
-/* Responsive FOOTER */
-@media (max-width: 900px) {
-    footer {
-        min-height: 110px;
-    }
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 5vw 10px 5vw;
-        gap: 10px;
-    }
-    .footer-main,
-    .links {
-        margin: 10px 0;
-        width: 100%;
-        align-items: center;
-        text-align: center;
-    }
-    .footer-main h2 {
-        font-size: 1.1rem;
-    }
-    .links p {
-        font-size: 1rem;
-    }
-    .links a {
-        font-size: 0.9rem;
-    }
-    .escudo {
-        max-width: 48px;
     }
 }
