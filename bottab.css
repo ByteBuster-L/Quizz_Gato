@@ -10,7 +10,6 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      height: 100vh;
       background-color: #f2f2f2;
     }
 
@@ -20,7 +19,6 @@
     grid-template-rows: repeat(3, 90px);
     gap: 0;
     justify-content: center;
-    margin: 0 auto 30px auto;
     background: #f2f2f2;
     overflow: hidden;
 }
@@ -175,10 +173,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-footer {
-    height: var(--h-footer);
+    margin: 340px auto 220px auto;
 }
 
 .container {
@@ -191,7 +186,6 @@ footer {
     width: 100%;
     bottom: 0;
     left: 0;
-    height: 100px;
 }
 
 
@@ -277,61 +271,6 @@ footer {
 
 span {
     color: #C79B66;
-}
-
-/*RESPONSIVE DESIGN*/
-
-@media screen and (max-width: 960px) {
-    main {
-        flex: 100%;
-        width: 100%;
-        height: calc(100%-3 * var(--h-footer));
-    }
-
-    header{
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 600px) {
-
-    .responsive{
-        width: 100%;
-    }
-    .container {
-        height: 100%;
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-
-    main,
-    aside {
-        flex: 100%;
-    }
-
-    main {
-        height: calc(100%-3 * var(--h-footer));
-    }
-
-    aside {
-        height: var(--h-footer);
-
-    }
-
-}
-
-@media screen and (max-width: 715px) {
-    .container {
-        height: 100%;
-        width: 100%;
-    }
-
-    .buscadores {
-        width: 100%;
-
-    }
 }
 .footer-content {
     background-color: #5F1B2D;
@@ -600,27 +539,21 @@ span {
 
 /* Responsive TABLERO y QUIZ */
 @media (max-width: 600px) {
-    main {
-        margin-top: 70px;
-        margin-bottom: 120px;
-    }
     #board {
-        grid-template-columns: repeat(3, 28vw);
-        grid-template-rows: repeat(3, 28vw);
-        max-width: 96vw;
-        min-width: 96vw;
-        margin: 8vw auto 8vw auto;
+        grid-template-columns: repeat(3, 48vw);
+        grid-template-rows: repeat(3, 48vw);
+        max-width: 126vw;
+        min-width: 126vw;
     }
     .square {
-        width: 28vw;
-        height: 28vw;
-        font-size: 2rem;
+        width: 48vw;
+        height: 48vw;
+        font-size: 4rem;
     }
     #quiz {
-        margin: 8vw auto 0 auto;
         padding: 8px 2vw 8px 2vw;
         font-size: 1rem;
-        position: static;
+        position: absolute;
         transform: none;
         max-width: 98vw;
     }
