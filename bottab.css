@@ -375,126 +375,122 @@ main {
     margin: 340px auto 220px auto;
     height: auto;
 }
+/* NAV RESPONSIVE */
+@media (max-width: 900px) {
+  .navs {
+    min-height: 60px;
+    height: auto;
+    flex-direction: column;
+    padding: 10px 15px;
+    align-items: flex-start;
+  }
 
-@media (max-width: 960px) {
-    main {
-        flex: 100%;
-        width: 100%;
-    }
+  .navegacion {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 2rem;
+    margin-top: 8px;
+    cursor: pointer;
+  }
+
+  .linksheader {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    background-color: #201e1e;
+  }
+
+  .linksheader.active {
+    display: flex;
+  }
+
+  .linksheader li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  .linksheader a {
+    font-size: 1.2rem;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .register, .login {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
 }
 
-/* Responsive para tablero */
-@media (max-width: 900px) {
-    #board {
-        grid-template-columns: repeat(3, 30vw);
-        grid-template-rows: repeat(3, 30vw);
-        max-width: 95vw;
-    }
+/* TABLERO Y QUIZ RESPONSIVE */
+@media (max-width: 600px) {
+  #board {
+    grid-template-columns: repeat(3, 30vw);
+    grid-template-rows: repeat(3, 30vw);
+    width: 100%;
+    max-width: 96vw;
+    margin-top: 20px;
+  }
 
-    .square {
-        width: 30vw;
-        height: 30vw;
-        font-size: 2rem;
-    }
+  .square {
+    width: 30vw;
+    height: 30vw;
+    font-size: 2.4rem;
+  }
 
-    #quiz {
-        position: relative;
-        margin: 40px auto;
-        padding: 12px;
-        max-width: 95vw;
-    }
+  #quiz {
+    position: absolute;
+    width: 100%;
+    max-width: 95vw;
+    margin: 320px auto;
+    padding: 12px;
+    text-align: center;
+  }
 }
 
-/* Responsive del menú */
+/* FOOTER RESPONSIVE */
 @media (max-width: 900px) {
-    .navs {
-        min-height: 60px;
-        height: 60px;
-    }
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10px;
+    gap: 20px;
+  }
 
-    .logo {
-        width: 140px;
-        height: 38px;
-    }
+  .footer-main, .links {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+  }
 
-    .navegacion {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
+  .social-links {
+    justify-content: center;
+    width: 100%;
+  }
 
-    .menu-icon {
-        display: block;
-        font-size: 2rem;
-    }
+  .footer-main h2 {
+    font-size: 1.3rem;
+  }
 
-    .linksheader {
-        display: none;
-        flex-direction: column;
-        width: 100vw;
-        left: 0;
-        top: 60px;
-        background: #5F1B2D;
-        position: absolute;
-    }
+  .links p {
+    font-size: 1.1rem;
+  }
 
-    .linksheader.active {
-        display: flex;
-    }
-
-    .linksheader li {
-        width: 100vw;
-        text-align: center;
-        margin: 12px 0;
-    }
-
-    .linksheader a {
-        display: block;
-        width: 100%;
-        font-size: 1.1rem;
-        padding: 14px 0;
-    }
-
-    .register, .login {
-        margin: 10px 0 0;
-    }
-}
-
-/* Responsive del footer */
-@media (max-width: 900px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 5vw 10px;
-        gap: 10px;
-    }
-
-    .footer-main,
-    .links {
-        margin: 10px 0;
-        width: 100%;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-main h2 {
-        font-size: 1.1rem;
-    }
-
-    .links p {
-        font-size: 1rem;
-    }
-
-    .links a {
-        font-size: 0.9rem;
-    }
-
-    .escudo {
-        max-width: 48px;
-    }
-
-    .social-links {
-        justify-content: center;
-        width: 100%;
-    }
+  .links a {
+    font-size: 0.9rem;
+  }
 }
